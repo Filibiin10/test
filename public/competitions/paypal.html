@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPal Integration</title>
+  
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AY6o4ShI1AQz4VmJ8e7xYJlSENLTDzpt_5cz8lNmFdhDIGfPUtR12DQRwWQa4UALH5sNBj2LZi01-bAk"></script>
+  
+</head>
+<body>
+  <h1>PayPal Button Example</h1>
+  
+  <!-- Container for the PayPal Button -->
+  <div id="paypal-button-container"></div>
+  
+  <script>
+    paypal.Buttons({
+      createOrder: async () => {
+        const response = await fetch('/paypal/create-order', {
+            method: 'POST',
+            headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',  // Add Accept header
+  },
+          body: JSON.stringify({ amount: '10.00' }),
+        });
+        const data = await response.json();
+        return data.id;
+      },
+      onApprove: async (data) => {
+  try {
+    const response = await fetch('/paypal/capture-order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({ orderID: data.orderID }),  // Ensure this is the correct order ID
+    });
+    if (!response.ok) {
+      throw new Error('Failed to capture order');
+    }
+    const result = await response.json();
+    if (result.status === 'success') {
+      alert('Payment successful!');
+    }
+  } catch (error) {
+    console.error('Error capturing order:', error);
+  }
+},
+
+    }).render('#paypal-button-container');
+  </script>
+</body>
+</html>

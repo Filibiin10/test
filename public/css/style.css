@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Fonts */
+* {
+  --common-font: "Montserrat", sans-serif;
+  --heading-font: "Josefin Sans", sans-serif;
+  --nav-font: "Montserrat", sans-serif;
+  --font-serif: serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--common-font); /* Apply common font globally */
+}
+
+.container1 {
+    width: 100%;
+    height: 400px;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* Darker overlay */
+        url('event-bg.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.pageTitle1 {
+    padding: 4rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for readability */
+    font-family: var(--heading-font); /* Apply heading font */
+}
+
+.content {
+    text-align: center;
+}
+
+.main-box h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.main-box p {
+    color: #e0e0e0;
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.form {
+    background: rgba(255, 255, 255, 0.95); /* Slightly more opaque */
+    padding: 20px;
+    border-radius: 12px; /* Softer corners */
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 80rem; /* 5xl max-width */
+    width: 100%; /* Ensures responsiveness */
+    margin-top: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+}
+
+input, button, select {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: var(--common-font); /* Apply common font */
+}
+
+input, select {
+    flex: 1;
+}
+
+button {
+    background-color: #004D5F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 40px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: var(--nav-font); /* Apply navigation font */
+}
+
+button:hover {
+    background-color: #003744;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(0); /* Reset on click */
+}

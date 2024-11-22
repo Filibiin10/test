@@ -1,0 +1,74 @@
+/* General Styles for Search Form */
+.smartsearch-box {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-select,
+.form-control {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-select {
+    background-color: #f9f9f9;
+}
+
+.form-control {
+    background-color: #fff;
+}
+
+/* Custom Style for the Filter Button Column */
+.filter-btn-col {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn.filter-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn.filter-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .btn.filter-btn {
+        width: 100%; /* Full-width filter button on smaller screens */
+    }
+}

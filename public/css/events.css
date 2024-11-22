@@ -1,0 +1,96 @@
+/* /* Container to enable grid layout */
+.grid-container {
+    display: grid;
+    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 columns on larger screens */
+}
+
+/* Ensures each event item fills a grid cell */
+.eventGrid {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.eventThumb {
+    position: relative;
+    /* Ensure the image is responsive */
+    width: 100%;
+    height: auto;
+  }
+  
+/* Thumbnail styling */
+.eventThumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Event details */
+.eventDetail {
+    padding: 15px;
+}
+
+.eventDetail h4 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.eventInfo {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+eventType,
+.eventCategory {
+  position: absolute;
+  bottom: 10px; /* Adjust this as needed */
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.eventCategory {
+    bottom: 0px; /* Positions it at the very bottom of the image */
+    background-color: #0D5EC9; 
+}
+  
+  .eventType {
+    bottom: 30px; 
+  }
+
+
+/* Button styling */
+.view-event-btn {
+    width: 60%;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+.share-btn {
+    margin-right: 10px;
+    margin-top: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.date-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-date,
+.event-time {
+    flex: 1; /* Ensure equal spacing */
+    text-align: left;
+}

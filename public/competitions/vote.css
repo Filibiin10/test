@@ -1,0 +1,12 @@
+.home-slider .form-control {
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+ }
+ .home-slider .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+ }
+ .home-slider .donate-btn:hover {
+    opacity: 0.9;
+ }
+ 

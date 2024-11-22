@@ -1,0 +1,265 @@
+/* Improved Styling for Image and Form Sections */
+
+.home-slider {
+   padding: 20px;
+}
+
+.home-slider .form-control {
+   height: 100vh;
+   border: 1px solid #ddd;
+   transition: border-color 0.3s;
+}
+
+.home-slider .form-control:focus {
+   border-color: #007bff;
+   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.home-slider .donate-btn:hover {
+   opacity: 0.9;
+}
+
+
+/* Voting Container and Inside Design */
+
+.voting-container {
+   max-width: 1100px;
+   margin: auto;
+   padding: 24px;
+   display: flex;
+   gap: 24px;
+   background-color: #ffffff;
+   border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+   flex: 0 0 300px;
+   text-align: center;
+}
+
+.profile-image {
+   width: 100%;
+   aspect-ratio: 1;
+   border-radius: 50%; /* Make the image circular */
+   overflow: hidden;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image img {
+   width: 100%;
+   height: auto;
+   border-radius: 50%; /* Image rounding */
+   object-fit: cover;
+}
+
+.details-section {
+   flex: 1;
+   padding: 16px;
+}
+
+.nominee-name {
+   font-size: 26px;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 8px;
+   text-align: center;
+}
+
+.nominee-category {
+   color: #666;
+   margin-bottom: 16px;
+   text-align: center;
+}
+
+.nominee-code {
+   font-family: monospace;
+   color: #444;
+   margin-bottom: 24px;
+   text-align: center;
+}
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+.form-group label {
+   display: block;
+   margin-bottom: 8px;
+   color: #444;
+   font-weight: bold;
+}
+
+.form-group input {
+   width: 100%;
+   padding: 12px;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   font-size: 16px;
+   transition: border-color 0.2s;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus {
+   outline: none;
+   border-color: #666;
+   box-shadow: 0 0 8px rgba(102, 102, 102, 0.3);
+}
+
+.amount-section {
+   background-color: #f8f8f8;
+   padding: 16px;
+   border-radius: 8px;
+   margin-bottom: 24px;
+}
+
+.amount-text {
+   font-size: 18px;
+   font-weight: 600;
+   margin-bottom: 8px;
+}
+
+.per-vote {
+   color: #666;
+   font-size: 14px;
+}
+
+/* Button Styling */
+
+.button-group {
+   display: flex;
+   gap: 12px;
+   justify-content: flex-end;
+   padding-top: 16px;
+}
+
+.btn {
+   padding: 14px 28px;
+   border: none;
+   border-radius: 6px;
+   font-size: 16px;
+   font-weight: 500;
+   cursor: pointer;
+   transition: transform 0.1s, opacity 0.2s;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+   transform: translateY(-2px);
+   opacity: 0.95;
+}
+
+.btn:active {
+   transform: translateY(0);
+   opacity: 1;
+}
+
+.btn-cancel {
+   background-color: #dc3545;
+   color: white;
+}
+
+.btn-submit {
+   background-color: #28a745;
+   color: white;
+}
+
+.notice {
+   font-size: 14px;
+   color: #666;
+   margin-top: 8px;
+}
+
+.skeleton {
+   background-color: #f0f0f0;
+   border-radius: 4px;
+   animation: skeleton-loading 1.5s infinite ease-in-out;
+}
+
+.skeleton-text {
+   height: 16px;
+   margin-bottom: 10px;
+   background-color: #e0e0e0;
+}
+
+.skeleton-name {
+   width: 60%;
+   height: 20px;
+   background-color: #e0e0e0;
+}
+
+.skeleton-category {
+   width: 40%;
+   height: 16px;
+   background-color: #e0e0e0;
+}
+
+.skeleton-image {
+   width: 100px;
+   height: 100px;
+   background-color: #e0e0e0;
+   border-radius: 50%;
+}
+
+.skeleton-input {
+   height: 36px;
+   background-color: #e0e0e0;
+   margin-bottom: 10px;
+}
+
+.skeleton-button {
+   height: 40px;
+   background-color: #e0e0e0;
+   border-radius: 4px;
+   margin: 10px 0;
+}
+
+@keyframes skeleton-loading {
+   0% {
+       background-position: -100%;
+   }
+   100% {
+       background-position: 100%;
+   }
+}
+
+.skeleton {
+   background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+   background-size: 200% 100%;
+   animation: skeleton-loading 1.5s infinite ease-in-out;
+}
+
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+   .voting-container {
+       flex-direction: column;
+       padding: 16px;
+   }
+
+   .profile-section {
+       max-width: 100%;
+   }
+
+   .profile-image {
+       max-width: 200px;
+       margin: 0 auto;
+   }
+
+   .details-section {
+       text-align: center;
+   }
+
+   .button-group {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .btn {
+       width: 100%;
+   }
+}
+
+
+
